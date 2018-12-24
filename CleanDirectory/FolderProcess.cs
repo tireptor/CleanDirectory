@@ -56,7 +56,7 @@ namespace CleanDirectory
             string newFileName =  StringProcess.escape(file.Name);
             // On renomme le fichier
             file.Rename(newFileName);
-            Console.WriteLine("Processed file '{0}'.", path);
+            Console.WriteLine("Processed file '{0}'.", path, " New Name : ", newFileName);
         }
     }
 }

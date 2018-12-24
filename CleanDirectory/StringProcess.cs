@@ -19,7 +19,6 @@ namespace CleanDirectory
             sh = sh.Replace("ù", "u");
             sh = sh.Replace("?", "");
             sh = sh.Replace("!", "");
-           // sh = sh.Replace(".", "_");
             sh = sh.Replace(",", "_");
             sh = sh.Replace(":", "");
             sh = sh.Replace(";", "");

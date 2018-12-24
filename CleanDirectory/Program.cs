@@ -12,8 +12,13 @@ namespace CleanDirectory
     {
         static void Main(string[] args)
         {
-            string[] myFolders = { @"E:\" }; // Déclarer les répertoires à parcourir dans ce tableau.
-
+            string[] myFolders =  ReadFromFile.ReadAllLine();
+            if (myFolders.Length < 1)
+            {
+                Console.WriteLine("Il faut créer dans le même répertoire que cet exécutable un fichier directory_path.txt avec au minimum un chemin de répertoire à parcourir.");
+                Console.ReadKey();
+                return;
+            }
             FolderProcess.SearchFilesInFolders(myFolders);
             Console.WriteLine("Processus terminé !");
             Console.ReadKey();
